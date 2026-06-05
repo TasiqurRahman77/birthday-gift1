@@ -102,12 +102,15 @@ color:white;
 
 .gallery{
 display:flex;
-gap:20px;
-flex-wrap:wrap;
+gap:15px;
 justify-content:center;
 margin-top:20px;
+flex-wrap:nowrap;
+overflow-x:auto;
 }
-
+.polaroid{
+flex:0 0 auto;
+}
 .polaroid{
 background:white;
 padding:10px;
@@ -189,6 +192,18 @@ button{
   right:10px;
   font-size:14px;
   padding:8px 12px;
+}
+
+}
+  @media (max-width:768px){
+
+.gallery{
+gap:10px;
+}
+
+.polaroid img{
+width:160px;
+height:160px;
 }
 
 }
