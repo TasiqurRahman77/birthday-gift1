@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sundori ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+html,body{
+width:100%;
+height:100%;
+overflow-x:hidden;
+background:#fff0f3;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.page{
+position:absolute;
+width:100vw;
+height:100vh;
+display:none;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+overflow-y:auto;
+}
+
+.active{
+display:flex;
+}
+
+h1{
+color:#c9184a;
+font-size:2.2rem;
+margin-bottom:20px;
+}
+
+p{
+max-width:700px;
+line-height:1.8;
+font-size:1.1rem;
+color:#590d22;
+}
+
+button{
+padding:12px 30px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+margin:10px;
+}
+
+.yes{
+background:#ff4d6d;
+color:white;
+}
+
+.no{
+background:#ffb5a7;
+color:white;
+position:absolute;
+}
+
+.nextBtn{
+background:#ff4d6d;
+color:white;
+}
+
+.backBtn{
+background:#ffb5a7;
+color:#590d22;
+}
+
+.musicBtn{
+position:fixed;
+top:20px;
+right:20px;
+z-index:999;
+background:#ff4d6d;
+color:white;
+}
+
+.gallery{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:20px;
+}
+
+.polaroid{
+background:white;
+padding:10px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.polaroid img{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:8px;
+}
+.giftContainer{
+display:flex;
+gap:30px;
+margin-top:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.gift{
+background:white;
+padding:20px;
+border-radius:20px;
+cursor:pointer;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.gift:hover{
+transform:scale(1.1);
+}
+
+.heart{
+position:absolute;
+font-size:20px;
+animation:floatUp 5s linear infinite;
+pointer-events:none;
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<button id="musicBtn" class="musicBtn">
+🎵 Play Music
+</button>
+
+<audio id="bgMusic" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="page1" class="page active">
+
+<div id="mainPenguin" style="font-size:120px;">
+🐧
+</div>
+
+<h1 id="mainTitle">
+PLS ACCEPT THE GIFT 🥺👉👈
+</h1>
+
+<div style="position:relative;width:100%;height:120px;">
+
+<button class="yes" onclick="showPage('page2')">
+YES ❤️
+</button>
+
+<button
+class="no"
+id="noBtn"
+onmouseover="moveNoBtn()"
+onclick="moveNoBtn()">
+NO
+</button>
+
+</div>
+
+</div>
+
+<div id="page2" class="page">
+
+<h1>
+Choose A Penguin 🐧
+</h1>
+
+<p>
+Each Penguin Has A Special Surprise ❤️
+</p>
+
+<div class="giftContainer">
+
+<div class="gift" onclick="showPage('page3')">
+<div style="font-size:90px;">🐧🎁</div>
+</div>
+
+<div class="gift" onclick="showPage('page3')">
+<div style="font-size:90px;">🐧💝</div>
+</div>
+
+</div>
+
+</div>
+<div id="page3" class="page">
+
+<h1>
+🎉 HAPPY BIRTHDAY MY SUNDORI 🎉
+</h1>
+
+<div class="gallery">
+
+<div class="polaroid">
+<img src="pic1.jpg" alt="">
+<p>My Love ❤️</p>
+</div>
+
+<div class="polaroid">
+<img src="pic2.jpg" alt="">
+<p>My Life 👑</p>
+</div>
+
+</div>
+
+<p style="margin-top:25px;">
+
+🎂 Happy Birthday Amr Sundori ❤️
+
+<br><br>
+
+ Happy Birthday amar cute Angry Bird 🐦❤️
+<br>
+Happy Birthday amr Madam 🌷
+
+<br><br>
+
+Ajker din ta amar jonno onek special,
+karon aj tomar jonmodin.
+
+Tomake niye amar jiboner protita muhurto
+aro sundor hoye uthe.
+
+Ajker din ta onk special, karon aaj amr madam er jonmodin. tmk niyei amr jibon er sb kichu.
+  Tmk chara ami vlo thakte parini kkhno. tmk ami kkhno harate chaina. 🥺👉👈
+
+<br><br>
+
+Aaj ei dine ami dua kri allah jno tmk sb smi sustho rakhe, sukhi rakhe r tmr iccha puron kre. 🩵
+  
+<br><br>
+
+Tomar sob shopno puron hok.
+Tomar mukhe sobsomoy misti hasi jeno thake.🩵
+
+</p>
+
+<div style="margin-top:20px;">
+
+<button
+class="backBtn"
+onclick="showPage('page2')">
+⬅️ Back
+</button>
+
+<button
+class="nextBtn"
+onclick="showPage('page4')">
+Next Surprise ➡️
+</button>
+
+</div>
+
+</div>
+<div id="page4" class="page">
+
+<div style="font-size:120px;">
+🐧💖🐧
+</div>
+
+<h1>
+Will You Be Mine Forever? 💖
+</h1>
+<p>
+
+Ami tomake onek bhalobashi ❤️
+
+<br><br>
+
+Aaj bhalobashi,
+kal bhalobashi,
+ar sara jibon bhalobashbo. 🥺🌷
+
+<br><br>
+
+Tumi ki sara jibon amar hoye thakbe? 💖
+
+</p>
+  <button
+class="backBtn"
+onclick="showPage('page3')">
+⬅️ Back
+</button>
+
+</div>
+  <script>
+
+const musicBtn =
+document.getElementById("musicBtn");
+
+const bgMusic =
+document.getElementById("bgMusic");
+
+musicBtn.addEventListener("click",()=>{
+
+bgMusic.play();
+
+musicBtn.innerHTML =
+"❤️ Music Playing";
+
+});
+
+let noCount = 0;
+
+function moveNoBtn(){
+
+const btn =
+document.getElementById("noBtn");
+
+const title =
+document.getElementById("mainTitle");
+
+const penguin =
+document.getElementById("mainPenguin");
+
+noCount++;
+
+if(noCount===1){
+
+title.innerHTML =
+"WHY DID YOU CLICK NO! 😭";
+
+penguin.innerHTML =
+"😭🐧";
+
+btn.innerHTML =
+"TRY AGAIN";
+
+}else{
+
+const x =
+Math.random() *
+(window.innerWidth -
+btn.offsetWidth - 50);
+
+const y =
+Math.random() *
+(window.innerHeight -
+btn.offsetHeight - 50);
+
+btn.style.left =
+x + "px";
+
+btn.style.top =
+y + "px";
+
+}
+
+}
+
+function showPage(id){
+
+const pages =
+document.querySelectorAll(".page");
+
+pages.forEach(page=>{
+
+page.classList.remove("active");
+
+});
+
+document
+.getElementById(id)
+.classList.add("active");
+
+}
+
+function createHeart(){
+
+const heart =
+document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML = "❤️";
+
+heart.style.left =
+Math.random()*100 + "vw";
+
+heart.style.fontSize =
+(Math.random()*20+15)
++ "px";
+
+heart.style.animationDuration =
+(Math.random()*3+3)
++ "s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},6000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
+  
