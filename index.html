@@ -17,7 +17,7 @@ font-family:Arial,sans-serif;
 
 html,body{
 width:100%;
-height:100%;
+min-height:100vh;
 overflow-x:hidden;
 background:#fff0f3;
 }
@@ -31,7 +31,7 @@ align-items:center;
 .page{
 position:absolute;
 width:100vw;
-height:100vh;
+min-height:100vh;
 display:none;
 flex-direction:column;
 justify-content:center;
@@ -76,6 +76,9 @@ color:white;
 background:#ffb5a7;
 color:white;
 position:absolute;
+left:50%;
+top:60%;
+transform:translate(-50%,-50%);
 }
 
 .nextBtn{
@@ -156,7 +159,39 @@ transform:translateY(-100px);
 opacity:0;
 }
 }
+@media (max-width:768px){
 
+h1{
+  font-size:1.6rem;
+}
+
+p{
+  font-size:1rem;
+  padding:0 10px;
+}
+
+.polaroid img{
+  width:140px;
+  height:140px;
+}
+
+button{
+  font-size:16px;
+  padding:10px 20px;
+}
+
+.giftContainer{
+  gap:15px;
+}
+
+.musicBtn{
+  top:10px;
+  right:10px;
+  font-size:14px;
+  padding:8px 12px;
+}
+
+}
 </style>
 </head>
 
